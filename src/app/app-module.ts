@@ -8,11 +8,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MyDirectove } from './my-directove';
 import { Menu } from './menu/menu';
+import { SterownikLicznika } from './sterownik-licznika/sterownik-licznika';
+import { Licznik } from './licznik/licznik';
+import { LicznikGloblany } from './services/licznik-globlany';
 
 @NgModule({
-  declarations: [App, Secondary, MyDirectove, Menu],
+  declarations: [App, Secondary, MyDirectove, Menu, SterownikLicznika, Licznik],
   imports: [BrowserModule, CommonModule, AppRoutingModule, FormsModule],
-  providers: [provideBrowserGlobalErrorListeners()],
+  providers: [provideBrowserGlobalErrorListeners(), LicznikGloblany],
   bootstrap: [App],
 })
 export class AppModule {}
