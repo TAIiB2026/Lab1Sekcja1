@@ -12,6 +12,7 @@ export class People {
   public people: Person[] = [];
 
   constructor(peopleRepository: PeopleRepositoryService) {
+    console.log(peopleRepository.get())
     this.people = peopleRepository.get();
   }
 

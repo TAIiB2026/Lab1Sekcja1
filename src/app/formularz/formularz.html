@@ -1,0 +1,15 @@
+<form #formularz="ngForm" (submit)="onSubmit(formularz)">
+    <div>
+        <label for="imie">Imię: </label>
+        <input type="text" name="imie" id="imie" ngModel />
+    </div>
+    <div>
+        <label for="nazwisko">Nazwisko: </label>
+        <input type="text" name="nazwisko" id="nazwisko" ngModel />
+    </div>
+    <div>
+        <label for="dateOfBirth">Data urodzenia: </label>
+        <input type="date" name="dateOfBirth" id="dateOfBirth" ngModel />
+    </div>
+    <input type="submit" name="submit" value="Zapisz" />
+</form>
