@@ -13,6 +13,10 @@ export class Formularz {
   private readonly service = inject(PEOPLE_REPOSITORY_TOKEN);
   private readonly router = inject(Router);
 
+  public name: string = '';
+  public surname:string = '';
+  public dateOfBirth: string = '1990-01-01';
+
   onSubmit(form: NgForm) {
     console.log(form.value);
     const dateOfBirth: Date = new Date(form.value['dateOfBirth']);
@@ -26,5 +30,15 @@ export class Formularz {
           }
         }
       });
+  }
+
+  reset(): void {
+    this.name = '';
+    this.surname = '';
+    this.dateOfBirth = '1990-01-01';
+  }
+
+  onNameChanged(imie: string): void  {
+    console.log(imie);
   }
 }
